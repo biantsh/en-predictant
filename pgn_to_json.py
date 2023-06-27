@@ -34,11 +34,10 @@ def main(pgn_dir: str, output_dir: str) -> None:
             if pgn_match['Event'] != MATCH_TYPE:
                 continue
 
+            json_name = f'{json_count:010}.json'
             json_count += 1
 
-            json_name = f'{json_count:010}.json'
             output_path = os.path.join(output_dir, json_name)
-
             with open(output_path, 'w') as json_file:
                 pgn_match.to_json(json_file, tag_names=TAGS)
 
