@@ -1,4 +1,4 @@
-"""Module for converting a match from chess notation to a tensor."""
+"""Module for converting a match from short algebraic notation to a tensor."""
 
 import re
 
