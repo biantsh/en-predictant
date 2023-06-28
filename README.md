@@ -1,6 +1,6 @@
 # En-predictant
 
-An AI model trained to predict chess Elo.
+A neural network trained to predict players' chess Elo.
 
 The project name is a wordplay on the chess meme "en passant".
 
