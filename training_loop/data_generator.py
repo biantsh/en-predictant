@@ -1,4 +1,4 @@
-"""Class used for loading and feeding the training data to the model."""
+"""Generator used for loading and feeding the training data to the model."""
 
 import glob
 import json

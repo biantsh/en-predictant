@@ -15,8 +15,8 @@ import os
 
 from data_formats.pgn import PGNParser
 
-MATCH_TYPE = 'Rated Blitz game'
 TAGS = ['Event', 'WhiteElo', 'BlackElo']
+MATCH_TYPE = 'Rated Blitz game'
 
 
 def main(pgn_dir: str, output_dir: str) -> None:
