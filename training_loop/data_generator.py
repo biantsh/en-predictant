@@ -1,3 +1,5 @@
+"""Class used for loading and feeding the training data to the model."""
+
 import glob
 import json
 import math
