@@ -19,7 +19,7 @@ https://database.lichess.org/#standard_games).
 
 **Scripts:**
 
-- `pgn_split.py`: To split large PGN files into individual match files.
+- `pgn_split.py`: To split large PGN files into smaller (per-match) files.
 - `pgn_to_json.py`: To convert PGN files into JSON.
 - `train_model.py`: To train a Keras model for Elo estimation.
 
