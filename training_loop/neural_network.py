@@ -25,6 +25,4 @@ class EloPredictionModel(keras.Sequential):
             layers.Dense(1, activation='linear')
         ])
 
-        self.compile(loss='mean_squared_error',
-                     optimizer='adam',
-                     metrics=['mae'])
+        self.compile(loss='mse', optimizer='adam', metrics=['mae'])
