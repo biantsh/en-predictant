@@ -6,7 +6,7 @@ The project name is a wordplay on the chess meme "en passant".
 
 # Setup and instructions
 
-This project requires `python>=3.10`.  Install code and external requirements 
+This project requires `python>=3.10`.  Install the code and external requirements 
 by running:
 
 ```shell
