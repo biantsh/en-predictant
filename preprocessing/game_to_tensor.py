@@ -31,7 +31,16 @@ def parse_moves(moves: str) -> list[str]:
     return moves.split(' ')
 
 
-def game_to_tensor(moves: str) -> np.ndarray:
+def trim_or_pad_to_length(tensor: np.ndarray, length: int) -> np.ndarray:
+    padding_length = length - tensor.shape[-1]
+
+    if padding_length <= 0:
+        return tensor[:length]
+
+    return np.dstack([tensor, np.zeros((8, 8, padding_length))])
+
+
+def game_to_tensor(moves: str, length: int) -> np.ndarray:
     moves = parse_moves(moves)
     board = ChessBoard()
 
@@ -42,4 +51,7 @@ def game_to_tensor(moves: str) -> np.ndarray:
         state_tensor = board.to_tensor(PIECE_VALUES, normalize=True)
         game_tensor = np.dstack([game_tensor, state_tensor])
 
-    return game_tensor[:, :, 1:]
+    game_tensor = game_tensor[:, :, 1:]
+    game_tensor = trim_or_pad_to_length(game_tensor, length)
+
+    return game_tensor

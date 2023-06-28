@@ -1,2 +1,4 @@
 chess==1.9.4
+keras==2.8.0
 numpy==1.25.0
+tensorflow==2.8.1
