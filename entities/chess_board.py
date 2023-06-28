@@ -1,3 +1,5 @@
+"""Module providing utilities for working with a chess board."""
+
 import chess
 import numpy as np
 
