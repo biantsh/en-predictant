@@ -34,6 +34,9 @@ def main(pgn_dir: str, output_dir: str) -> None:
             if pgn_match['Event'] != MATCH_TYPE:
                 continue
 
+            if '{' in pgn_match.moves:
+                continue
+
             json_name = f'{json_count:010}.json'
             json_count += 1
 

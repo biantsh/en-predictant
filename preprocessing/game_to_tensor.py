@@ -24,9 +24,10 @@ PIECE_VALUES = {
 
 
 def parse_moves(moves: str) -> list[str]:
-    # Remove numeral indices and game result
+    # Remove numeric indices and game result
     moves = re.sub(r'[0-9]+\. ', '', moves)
     moves = re.sub(r' [0-9]+-[0-9]+', '', moves)
+    moves = moves.replace(' 1/2-1/2', '')
 
     return moves.split(' ')
 
@@ -35,7 +36,7 @@ def trim_or_pad_to_length(tensor: np.ndarray, length: int) -> np.ndarray:
     padding_length = length - tensor.shape[-1]
 
     if padding_length <= 0:
-        return tensor[:length]
+        return tensor[:, :, :length]
 
     return np.dstack([tensor, np.zeros((8, 8, padding_length))])
 
