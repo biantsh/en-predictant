@@ -66,4 +66,4 @@ class PGNMatch:
         json.dump(json_content, json_file, indent=2)
 
     def has_tag(self, tag_name: str) -> bool:
-        return tag_name in self._tags
+        return tag_name in self._tags and '?' not in self._tags[tag_name]
